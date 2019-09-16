@@ -1,6 +1,6 @@
 {
     "name": "@ultimaker/eslint-config-ultimaker",
-    "version": "1.0.0",
+    "version": "0.0.0",
     "description": "ESLint rules for use across Ultimaker web-based products",
     "main": "index.js",
     "author": "Ultimaker B.V.",
