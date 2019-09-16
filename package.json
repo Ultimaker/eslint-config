@@ -1,5 +1,5 @@
 {
-    "name": "@ultimaker/eslint-config-ultimaker",
+    "name": "@ultimaker/eslint-config",
     "version": "1.0.0",
     "description": "ESLint rules for use across Ultimaker web-based products",
     "main": "index.js",
