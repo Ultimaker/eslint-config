@@ -13,7 +13,7 @@ You can then run your linting command as usual.
 
 ## Publishing Releases on NPM
 To make a new release, just create an annotated git tag with the new version number.
-The CI will pick this up and publish it to npm. The new version number must follow [semver](https://semver.org/).
+The CI will pick this up and publish it on NPM. The new version number must follow [semver](https://semver.org/).
 
 You should also make a release on GitHub to document the changes (this is the preferred method).
 
