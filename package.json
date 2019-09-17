@@ -9,6 +9,10 @@
         "type": "git",
         "url": "git+https://github.com/Ultimaker/eslint-config.git"
     },
+    "scripts": {
+        "lint": "eslint ./index.js",
+        "lint:fix": "eslint --fix ./index.js"
+    },
     "dependencies": {
         "eslint": "^6.4.0",
         "eslint-config-airbnb": "^18.0.1",
