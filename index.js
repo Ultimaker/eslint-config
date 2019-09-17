@@ -1,6 +1,5 @@
 // Copyright (c) 2019 Ultimaker B.V.
 
-/* eslint-disable quote-props */
 module.exports = {
     extends: 'airbnb',
     env: {
@@ -33,9 +32,17 @@ module.exports = {
     settings: {
         'import/extensions': ['.js', '.jsx'],
     },
-
-    // Create some special overrides for TypeScript files
     overrides: [
+
+        // Allow this file to use quotes on all ESLint rules for consistency
+        {
+            'files': ['./index.js'],
+            'rules': {
+                'quote-props': 'off',
+            },
+        },
+
+        // Create some special overrides for TypeScript files
         {
             files: ['**/*.ts', '**/*.tsx'],
             parser: 'typescript-eslint-parser',
@@ -64,4 +71,3 @@ module.exports = {
         },
     ],
 };
-/* eslint-disable quote-props */
