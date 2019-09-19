@@ -12,14 +12,17 @@ module.exports = {
 You can then run your linting command as usual.
 
 ## Publishing Releases on NPM
-To make a new release, just create an annotated git tag with the new version number.
-The CI will pick this up and publish it on NPM. The new version number must follow [semver](https://semver.org/).
+To make a new release, run `npm version` with the right parameters (see example).
+This will update the package.json file, commit the changes and create an annotated tag.
+After pushing, the CI will pick this up and publish it to npm. 
+You should also make a release on github to document the changes.
+See https://docs.npmjs.com/cli/version for supported parameters to `npm version`. 
 
-You should also make a release on GitHub to document the changes (this is the preferred method).
+### Example
 
-Example:
+> **Note:** `%s` will be automatically replaced with the new version number.
 
 ```bash
-git tag -a v1.0.0 -m "Tagging v1.0.0 release"
+npm version patch -m "Upgrade to %s"
 git push --tags
 ```
