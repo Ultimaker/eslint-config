@@ -11,7 +11,7 @@ stages:
   - deploy
 
 before_script:
-  - yarn install
+  - npm ci
 
 test:
   stage: test
