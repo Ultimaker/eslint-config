@@ -5,7 +5,7 @@ To use this set of rules, simply create an `.eslintrc.js` file in the root of yo
 
 ```js
 module.exports = {
-    extends: "@ultimaker/eslint-config",
+    extends: '@ultimaker/eslint-config',
 };
 ```
 
@@ -23,6 +23,6 @@ See https://docs.npmjs.com/cli/version for supported parameters to `npm version`
 > **Note:** `%s` will be automatically replaced with the new version number.
 
 ```bash
-npm version patch -m "Upgrade to %s"
+npm version major|minor|patch
 git push --tags
 ```
