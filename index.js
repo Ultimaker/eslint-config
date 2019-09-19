@@ -17,43 +17,51 @@ module.exports = {
     },
     plugins: ['import'],
     rules: {
-        indent: ['error', 4],
-        'no-underscore-dangle': 0,
-        'import/no-unresolved': 0,
-        'jsx-closing-tag-location': 0,
+        'indent': ['error', 4],
+        'no-underscore-dangle': 'off',
+        'import/no-unresolved': 'off',
+        'jsx-closing-tag-location': 'off',
         'react/jsx-indent': ['error', 4],
         'react/jsx-indent-props': ['error', 4],
-        'react/no-array-index-key': 0,
-        'class-methods-use-this': 0,
-        camelcase: 0,
-        'max-len': 0,
-        'no-useless-escape': 0,
+        'react/no-array-index-key': 'off',
+        'class-methods-use-this': 'off',
+        'camelcase': 'off',
+        'max-len': 'off',
+        'no-useless-escape': 'off',
     },
     settings: {
         'import/extensions': ['.js', '.jsx'],
     },
-
-    // Create some special overrides for TypeScript files
     overrides: [
+
+        // Allow this file to use quotes on all ESLint rules for consistency
+        {
+            'files': ['./index.js'],
+            'rules': {
+                'quote-props': 'off',
+            },
+        },
+
+        // Create some special overrides for TypeScript files
         {
             files: ['**/*.ts', '**/*.tsx'],
             parser: 'typescript-eslint-parser',
             rules: {
 
                 // Required for interfaces
-                'no-undef': 0,
-                'no-unused-vars': 0,
-                'react/prop-types': 0,
+                'no-undef': 'off',
+                'no-unused-vars': 'off',
+                'react/prop-types': 'off',
 
                 // Use .tsx instead of .jsx
-                'react/jsx-filename-extension': [1, {
+                'react/jsx-filename-extension': ['warn', {
                     extensions: ['.tsx'],
                 }],
 
                 // Not going to worry about keyboard navigation for now
-                'jsx-a11y/click-events-have-key-events': 0,
-                'jsx-a11y/no-static-element-interactions': 0,
-                'jsx-a11y/interactive-supports-focus': 0,
+                'jsx-a11y/click-events-have-key-events': 'off',
+                'jsx-a11y/no-static-element-interactions': 'off',
+                'jsx-a11y/interactive-supports-focus': 'off',
             },
             settings: {
 
