@@ -58,6 +58,12 @@ module.exports = {
                     extensions: ['.tsx'],
                 }],
 
+                // Allow using defaultProps at top of class declaration
+                'react/static-property-placement': ['error', 'static public field'],
+
+                // Allow prop spreading
+                'react/jsx-props-no-spreading': 'off',
+
                 // Not going to worry about keyboard navigation for now
                 'jsx-a11y/click-events-have-key-events': 'off',
                 'jsx-a11y/no-static-element-interactions': 'off',
