@@ -13,14 +13,22 @@
         "lint": "eslint ./index.js",
         "lint:fix": "eslint --fix ./index.js"
     },
-    "dependencies": {
+    "devDependencies": {
+        "@typescript-eslint/parser": "^2.3.0",
         "eslint": "^6.4.0",
         "eslint-config-airbnb": "^18.0.1",
         "eslint-plugin-import": "^2.18.2",
         "eslint-plugin-jsx-a11y": "^6.2.3",
-        "eslint-plugin-react": "^7.14.3"
+        "eslint-plugin-react": "^7.14.3",
+        "typescript": "^3.6.3"
     },
     "peerDependencies": {
-        "eslint": "^6.4.0"
+        "@typescript-eslint/parser": "^2.3.0",
+        "eslint": "^6.4.0",
+        "eslint-config-airbnb": "^18.0.1",
+        "eslint-plugin-import": "^2.18.2",
+        "eslint-plugin-jsx-a11y": "^6.2.3",
+        "eslint-plugin-react": "^7.14.3",
+        "typescript": "^3.6.3"
     }
 }

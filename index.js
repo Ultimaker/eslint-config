@@ -45,7 +45,7 @@ module.exports = {
         // Create some special overrides for TypeScript files
         {
             files: ['**/*.ts', '**/*.tsx'],
-            parser: 'typescript-eslint-parser',
+            parser: '@typescript-eslint/parser',
             rules: {
 
                 // Required for interfaces
