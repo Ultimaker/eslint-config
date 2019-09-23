@@ -10,8 +10,8 @@
         "url": "git+https://github.com/Ultimaker/eslint-config.git"
     },
     "scripts": {
-        "lint": "eslint ./index.js",
-        "lint:fix": "eslint --fix ./index.js"
+        "lint": "eslint --ignore-pattern '!.eslintrc.js' '**/{.,}*.js'",
+        "lint:fix": "eslint --ignore-pattern '!.eslintrc.js' --fix '**/{.,}*.js'"
     },
     "devDependencies": {
         "@typescript-eslint/parser": "^2.3.0",
