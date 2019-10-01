@@ -24,5 +24,5 @@ See https://docs.npmjs.com/cli/version for supported parameters to `npm version`
 
 ```bash
 npm version major|minor|patch
-git push --tags
+git push --follow-tags
 ```
