@@ -24,6 +24,7 @@ publish:
   stage: deploy
   script:
     - npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
+    - npm run lint
     - npm --unsafe-perm --access public publish
   only:
     - tags
