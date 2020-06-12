@@ -20,6 +20,10 @@ module.exports = {
         'indent': ['error', 4],
         'no-underscore-dangle': 'off',
         'import/no-unresolved': 'off',
+        'import/extensions': ['error', 'ignorePackages', {
+            ts: 'never',
+            tsx: 'never',
+        }],
         'jsx-closing-tag-location': 'off',
         'react/jsx-indent': ['error', 4],
         'react/jsx-indent-props': ['error', 4],
@@ -30,10 +34,13 @@ module.exports = {
         'no-useless-escape': 'off',
     },
     settings: {
-        'import/extensions': ['.js', '.jsx'],
+        'import/resolver': {
+            node: {
+                extensions: ['.ts', '.tsx', '.json'],
+            },
+        },
     },
     overrides: [
-
         // Allow this file to use quotes on all ESLint rules for consistency
         {
             'files': ['./index.js'],
