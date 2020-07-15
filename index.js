@@ -78,6 +78,11 @@ module.exports = {
 
                 // https://humanwhocodes.com/blog/2019/01/stop-using-default-exports-javascript-module
                 'import/prefer-default-export': 'off',
+
+                /** We need to be able to export both normal and connected versions of components
+                 * using named for the base component in tests, and default for connected/router
+                 * component in the app-proper. */
+                'import/no-named-as-default': 'off',
             },
             settings: {
 
