@@ -18,7 +18,7 @@
         "lint:fix": "eslint --ignore-pattern '!.eslintrc.js' --fix '**/{.,}*.js'"
     },
     "devDependencies": {
-        "@typescript-eslint/parser": "^2.3.0",
+        "@typescript-eslint/parser": "^3.9.0",
         "eslint": "^6.4.0",
         "eslint-config-airbnb": "^18.0.1",
         "eslint-plugin-import": "^2.18.2",
@@ -27,7 +27,7 @@
         "typescript": "^3.6.3"
     },
     "peerDependencies": {
-        "@typescript-eslint/parser": "^2.3.0",
+        "@typescript-eslint/parser": "^3.9.0",
         "eslint": "^6.4.0",
         "eslint-config-airbnb": "^18.0.1",
         "eslint-plugin-import": "^2.18.2",
