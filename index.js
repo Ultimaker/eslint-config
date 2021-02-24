@@ -83,6 +83,9 @@ module.exports = {
                  * using named for the base component in tests, and default for connected/router
                  * component in the app-proper. */
                 'import/no-named-as-default': 'off',
+
+                // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-use-before-define.md
+                'no-use-before-define': 'off',
             },
             settings: {
 
