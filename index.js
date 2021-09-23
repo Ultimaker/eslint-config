@@ -25,6 +25,7 @@ module.exports = {
             tsx: 'never',
         }],
         'jsx-closing-tag-location': 'off',
+        'react/default-props-match-prop-types': 'off',
         'react/jsx-indent': ['error', 4],
         'react/jsx-indent-props': ['error', 4],
         'react/no-array-index-key': 'off',
