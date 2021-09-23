@@ -27,7 +27,7 @@ jobs:
         secretId: ${{ secrets.VAULT_SECRET_ID }}
         secrets: |
           secret/data/systems/common/npm token | NPM_TOKEN;
-          secret/data/systems/common/slack webhook | SLACK_WEBHOOK_URL
+          secret/data/systems/common/slack webhook
     - uses: actions/checkout@v2
     - name: Npm cache
       uses: actions/cache@v1
@@ -45,5 +45,6 @@ jobs:
         author_name: Stardust - Deploy
         fields: repo,commit,message,author
       env:
+        SLACK_WEBHOOK_URL: ${{ steps.secrets.outputs.webhook }}
         SLACK_USERNAME: Stardust
       if: failure()
