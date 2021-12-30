@@ -6,15 +6,33 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - uses: google-github-actions/auth@v0.4.3
+      with:
+        credentials_json: ${{ secrets.GOOGLE_CREDENTIALS_JSON }}
+
+    - name: Get common secrets
+      id: secrets
+      uses: google-github-actions/get-secretmanager-secrets@v0.3.2
+      with:
+        secrets: |-
+          github:um-cloud-production/github
+
     - uses: actions/checkout@v2
+
     - name: NPM cache
       uses: actions/cache@v2
       with:
         path: ~/.npm
         key: npm-${{ hashFiles('**/package-lock.json') }}
+
     - uses: actions/setup-node@v2
       with:
         node-version: 16
+
     - run: npm ci
+      env:
+        GITHUB_TOKEN: ${{ fromJson(steps.secrets.outputs.github).token }} # Needed because we install private packages from npm.pkg.github.com
+
     - run: npm run build
+
     - run: npm run lint

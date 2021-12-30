@@ -21,6 +21,7 @@ jobs:
       with:
         secrets: |-
           slack:um-cloud-production/slack
+          github:um-cloud-production/github
 
     - uses: actions/checkout@v2
 
@@ -35,6 +36,8 @@ jobs:
         node-version: 16
 
     - run: npm ci
+      env:
+        GITHUB_TOKEN: ${{ fromJson(steps.secrets.outputs.github).token }} # Needed because we install private packages from npm.pkg.github.com
 
     - run: npm publish --tag beta
       env:
