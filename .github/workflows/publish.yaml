@@ -14,8 +14,8 @@ permissions:
   contents: read
   # Needed for Workload Identity
   id-token: write
-  # Needed to pull docker images
-  packages: read
+  # Needed to pull docker images / write NPM packages
+  packages: write
 
 jobs:
   publish:
