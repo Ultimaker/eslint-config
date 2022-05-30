@@ -1,3 +1,4 @@
+# These workflows are copied from stardust-npm-scripts. Edit them there.
 ---
 name: Lint, test, build, and publish
 on:
@@ -14,8 +15,8 @@ permissions:
   contents: read
   # Needed for Workload Identity
   id-token: write
-  # Needed to pull docker images / write NPM packages
-  packages: write
+  # Needed to pull docker images
+  packages: read
 
 jobs:
   publish:
