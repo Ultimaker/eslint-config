@@ -16,7 +16,7 @@ permissions:
   # Needed for Workload Identity
   id-token: write
   # Needed to pull docker images
-  packages: read
+  packages: write
 
 jobs:
   publish:
