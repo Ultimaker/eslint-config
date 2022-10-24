@@ -19,7 +19,7 @@
     },
     "devDependencies": {
         "@typescript-eslint/parser": "^5.40.0",
-        "eslint": "^8.25.0",
+        "eslint": "^8.26.0",
         "eslint-config-airbnb": "^19.0.4",
         "eslint-plugin-import": "^2.26.0",
         "eslint-plugin-jsx-a11y": "^6.5.1",
@@ -28,7 +28,7 @@
     },
     "peerDependencies": {
         "@typescript-eslint/parser": "^5.40.0",
-        "eslint": "^8.25.0",
+        "eslint": "^8.26.0",
         "eslint-config-airbnb": "^19.0.4",
         "eslint-plugin-import": "^2.18.2",
         "eslint-plugin-jsx-a11y": "^6.2.3",
